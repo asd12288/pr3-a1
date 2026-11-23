@@ -11,6 +11,8 @@ private:
     int apartmentNumber;
     int level;
 
+    static char *copyString(const char *source);
+
 public:
     Resident();
     Resident(const Resident &other);
