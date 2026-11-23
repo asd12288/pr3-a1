@@ -1,10 +1,11 @@
 #include "Resident.h"
 #include <cstring>
+using name std
 
 char *Resident::copyString(const char *source)
 {
-    char *copy = new char[std::strlen(source) + 1];
-    std::strcpy(copy, source);
+    char *copy = new char[strlen(source) + 1];
+    strcpy(copy, source);
     return copy;
 }
 
