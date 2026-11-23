@@ -30,3 +30,8 @@ Resident::Resident(const char *name, const char *lastName, int phoneNumber, int 
       level(level)
 {
 }
+
+Resident::Resident(const Resident &other)
+    : name(copyString(other.name)), lastName(copyString(other.lastName)),
+      phoneNumber(other.phoneNumber), apartmentNumber(other.apartmentNumber),
+      level(other.level) {}
