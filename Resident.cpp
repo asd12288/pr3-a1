@@ -1,12 +1,13 @@
 #include "Resident.h"
 #include <cstring>
-using name std
+using namespace std;
 
 char *Resident::copyString(const char *source)
 {
     char *copy = new char[strlen(source) + 1];
     strcpy(copy, source);
     return copy;
+    
 }
 
 int Resident::getPhoneNumber() const
