@@ -12,15 +12,15 @@ private:
 public:
     Building();
 
-    Building(const Building &other);
-    Building &operator=(const Building &other);
+    Building(const Building& other);
+    Building &operator=(const Building& other);
 
     ~Building();
 
-    bool addResident(const Resident &resident);
+    bool addResident(const Resident& resident);
     bool deleteResident(int index);
-    Resident &getResident(int index);
-    const Resident &getResident(int index) const;
+    Resident& getResident(int index);
+    const Resident& getResident(int index) const;
     int getSize() const;
 };
 
