@@ -7,11 +7,11 @@ char *Resident::copyString(const char *source)
     char *copy = new char[strlen(source) + 1];
     strcpy(copy, source);
     return copy;
-    
 }
 
 Resident::Resident()
-    :name(new char[1]), lastName(new char[1]), phoneNumber(0), apartmentNumber(0), level(0){
+    : name(new char[1]), lastName(new char[1]), phoneNumber(0), apartmentNumber(0), level(0)
+{
 
     *name = '\0';
     *lastName = '\0';
@@ -30,41 +30,50 @@ Resident::Resident(const Resident &other)
     : name(copyString(other.name)), lastName(copyString(other.lastName)),
       phoneNumber(other.phoneNumber), apartmentNumber(other.apartmentNumber),
       level(other.level) {}
-      
-Resident::~Resident(){
+
+Resident::~Resident()
+{
     delete[] name;
-    delete [] lastName;
+    delete[] lastName;
 }
-int Resident::getApartmentNumber() const{
+int Resident::getApartmentNumber() const
+{
     return apartmentNumber;
 }
-int Resident::getLevel() const{
+int Resident::getLevel() const
+{
     return level;
 }
 int Resident::getPhoneNumber() const
 {
     return phoneNumber;
 }
-const char* Resident::getName() const{
+const char *Resident::getName() const
+{
     return name;
 }
-const char* Resident::getLastName() const{
+const char *Resident::getLastName() const
+{
     return lastName;
 }
 
-void Resident::setName(const char *newName){
+void Resident::setName(const char *newName)
+{
     name = copyString(newName);
-
 }
-void Resident::setLastName(const char *newLastName){
+void Resident::setLastName(const char *newLastName)
+{
     lastName = copyString(newLastName);
 }
-void Resident::setPhoneNumber(int newPhoneNumber){
+void Resident::setPhoneNumber(int newPhoneNumber)
+{
     phoneNumber = newPhoneNumber;
 }
-void Resident::setApartmentNumber(int newApartmentNumber){
+void Resident::setApartmentNumber(int newApartmentNumber)
+{
     apartmentNumber = newApartmentNumber;
 }
-void Resident::setLevel(int newLevel){
+void Resident::setLevel(int newLevel)
+{
     level = newLevel;
 }
