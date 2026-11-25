@@ -39,7 +39,10 @@ void addCommand(Building *buildings[])
 {
     int id, phone, apartment, level;
     string name, lastName;
-    cin >> id >> name >> lastName >> phone >> apartment >> level;
+    if (!(cin >> id >> name >> lastName >> phone >> apartment >> level))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -54,7 +57,10 @@ void addCommand(Building *buildings[])
 void deleteCommand(Building *buildings[])
 {
     int id, index;
-    cin >> id >> index;
+    if (!(cin >> id >> index))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -74,7 +80,10 @@ void deleteCommand(Building *buildings[])
 void printCommand(Building *buildings[])
 {
     int id;
-    cin >> id;
+    if (!(cin >> id))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -88,7 +97,10 @@ void updateCommand(Building *buildings[])
 {
     int id, index, phone, apartment, level;
     string name, lastName;
-    cin >> id >> index >> name >> lastName >> phone >> apartment >> level;
+    if (!(cin >> id >> index >> name >> lastName >> phone >> apartment >> level))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -113,7 +125,10 @@ void updateCommand(Building *buildings[])
 void copyBuildingCommand(Building *buildings[])
 {
     int destination, source;
-    cin >> destination >> source;
+    if (!(cin >> destination >> source))
+    {
+        return;
+    }
     if (!isValidBuildingId(destination) || !isValidBuildingId(source))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -134,7 +149,10 @@ void copyBuildingCommand(Building *buildings[])
 void assignBuildingCommand(Building *buildings[])
 {
     int destination, source;
-    cin >> destination >> source;
+    if (!(cin >> destination >> source))
+    {
+        return;
+    }
     if (!isValidBuildingId(destination) || !isValidBuildingId(source))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -150,7 +168,10 @@ void copyResidentCommand(Building *buildings[], bool useAssignment)
 {
     int id, index;
     string newName;
-    cin >> id >> index >> newName;
+    if (!(cin >> id >> index >> newName))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -184,7 +205,10 @@ void copyResidentCommand(Building *buildings[], bool useAssignment)
 void selfAssignBuildingCommand(Building *buildings[])
 {
     int id;
-    cin >> id;
+    if (!(cin >> id))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
@@ -200,7 +224,10 @@ void selfAssignBuildingCommand(Building *buildings[])
 void selfAssignResidentCommand(Building *buildings[])
 {
     int id, index;
-    cin >> id >> index;
+    if (!(cin >> id >> index))
+    {
+        return;
+    }
     if (!isValidBuildingId(id))
     {
         cout << "INVALID_BUILDING" << endl;
