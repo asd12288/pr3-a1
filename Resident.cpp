@@ -35,6 +35,21 @@ Resident::~Resident(){
     delete[] name;
     delete [] lastName;
 }
+Resident& Resident::operator=(const Resident& other) {
+    if (this == &other) {
+        return *this;
+    }
+    char* newName = copyString(other.name);
+    char* newLastName = copyString(other.lastName);
+    delete[] name;
+    delete[] lastName;
+    name = newName;
+    lastName = newLastName;
+    phoneNumber = other.phoneNumber;
+    apartmentNumber = other.apartmentNumber;
+    level = other.level;
+    return *this;
+}
 int Resident::getApartmentNumber() const{
     return apartmentNumber;
 }
