@@ -38,8 +38,12 @@ Resident &Resident::operator=(const Resident &other)
         return *this;
     }
 
-    setName(other.name);
-    setLastName(other.lastName);
+    char *newName = copyString(other.name);
+    char *newLastName = copyString(other.lastName);
+    delete[] name;
+    delete[] lastName;
+    name = newName;
+    lastName = newLastName;
     phoneNumber = other.phoneNumber;
     apartmentNumber = other.apartmentNumber;
     level = other.level;
